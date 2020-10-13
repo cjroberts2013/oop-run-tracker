@@ -1,0 +1,23 @@
+{
+	"name": "oop-run-tracker",
+	"version": "1.0.0",
+	"description": "",
+	"main": "script.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cjroberts2013/oop-run-tracker.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/cjroberts2013/oop-run-tracker/issues"
+	},
+	"homepage": "https://github.com/cjroberts2013/oop-run-tracker#readme",
+	"dependencies": {
+		"live-server": "^1.2.1",
+		"tachyons": "^4.12.0"
+	}
+}
