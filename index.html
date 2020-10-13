@@ -3,9 +3,76 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tachyons@4/css/tachyons.min.css"
+		/>
+
 		<title>Run Tracker</title>
 	</head>
-	<body>
+	<body class="helvetica">
+		<div class="mw8 center pa3 ph5-ns container">
+			<h1 class="gray tc">My <span class="green">Run</span> Tracker</h1>
+
+			<form class="black-80 pa4" id="run-form">
+				<div class="center">
+					<label for="distance" class="f6 b db mb2"
+						>Distance <span class="normal black-60">(in miles)</span></label
+					>
+					<input
+						id="distance"
+						class="input-reset ba b--black-20 pa2 mb2 db w-100"
+						type="text"
+						aria-describedby="name-desc"
+						required
+					/>
+
+					<label for="pace" class="f6 b db mb2"
+						>Pace <span class="normal black-60">(miles/min)</span></label
+					>
+					<input
+						id="pace"
+						class="input-reset ba b--black-20 pa2 mb2 db w-100"
+						type="text"
+						aria-describedby="name-desc"
+						required
+					/>
+
+					<label for="time" class="f6 b db mb2"
+						>Time <span class="normal black-60">(HH:MM:SS)</span></label
+					>
+					<input
+						id="time"
+						class="input-reset ba b--black-20 pa2 mb2 db w-100"
+						type="text"
+						aria-describedby="name-desc"
+						required
+					/>
+
+					<input
+						class="b ph3 pv2 input-reset ba b--black--20 bg-transparent w-100 bg-green white grow pointer f6"
+						type="submit"
+						value="Add Run"
+					/>
+				</div>
+			</form>
+
+			<div class="pa4">
+				<div class="">
+					<table class="f6 w-100 mw8 center" cellspacing="0">
+						<thead class="">
+							<tr class="stripe-dark">
+								<th class="fw6 tl pa3">Distance</th>
+								<th class="fw6 tl pa3">Pace</th>
+								<th class="fw6 tl pa3">Time</th>
+								<th class="fw6 tl pa3"></th>
+							</tr>
+						</thead>
+						<tbody class="lh-copy" id="run-list"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
