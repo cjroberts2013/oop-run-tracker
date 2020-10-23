@@ -34,6 +34,8 @@ class UI {
 		if (el.classList.contains("delete")) {
 			el.parentElement.parentElement.remove();
 			UI.showAlert("Run Removed", "danger");
+			Store.removeRun(e.target.parentElement.previousElementSibling.textContent);
+
 		}
 	}
 
@@ -121,7 +123,6 @@ document.querySelector("#run-form").addEventListener("submit", (e) => {
 document.querySelector("#run-list").addEventListener("click", (e) => {
 	UI.deleteRun(e.target);
 
-	Store.removeRun(e.target.parentElement.previousElementSibling.textContent);
-
+	
 	
 });
