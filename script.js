@@ -33,6 +33,7 @@ class UI {
 	static deleteRun(el) {
 		if (el.classList.contains("delete")) {
 			el.parentElement.parentElement.remove();
+			UI.showAlert("Run Removed", "danger");
 		}
 	}
 
@@ -122,5 +123,5 @@ document.querySelector("#run-list").addEventListener("click", (e) => {
 
 	Store.removeRun(e.target.parentElement.previousElementSibling.textContent);
 
-	UI.showAlert("Run Removed", "danger");
+	
 });
